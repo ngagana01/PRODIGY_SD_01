@@ -7,11 +7,11 @@ st.set_page_config(page_title="Temperature Converter", page_icon="🌡", layout=
 st.title("🌡 Smart Temperature Converter")
 st.caption("Convert temperatures instantly + track history + download results")
 
-# ---------------- SESSION HISTORY ----------------
+
 if "history" not in st.session_state:
     st.session_state.history = []
 
-# ---------------- INPUT ----------------
+
 value = st.number_input("Enter temperature value", format="%.2f")
 
 unit = st.selectbox(
@@ -19,7 +19,7 @@ unit = st.selectbox(
     ["Celsius", "Fahrenheit", "Kelvin"]
 )
 
-# ---------------- CONVERT BUTTON ----------------
+
 if st.button("Convert Temperature"):
     result = convert(value, unit)
 
@@ -32,15 +32,15 @@ if st.button("Convert Temperature"):
             st.success(f"{key}: {val:.2f}")
             row[key] = round(val, 2)
 
-        # Save to history
+       
         st.session_state.history.append(row)
 
     else:
         st.error("Invalid unit selected")
 
-# ---------------- HISTORY TABLE ----------------
+
 st.divider()
-st.subheader("📜 Conversion History")
+st.subheader("Conversion History")
 
 if st.session_state.history:
 
@@ -65,7 +65,7 @@ if st.session_state.history:
 else:
     st.info("No conversions yet.")
 
-# ---------------- EXTRA FEATURES ----------------
+
 st.divider()
 st.markdown("### ⚙ Extra Tools")
 
@@ -78,3 +78,4 @@ with col2:
     if st.session_state.history:
         last = st.session_state.history[-1]["Input"]
         st.metric("Last Input", last)
+
