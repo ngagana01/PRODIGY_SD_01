@@ -34,6 +34,9 @@ Streamlit
 
 Pandas
 
-streamlit app link:https://appigysd01-f6umwsycg7qnxmddsfcyca.streamlit.app/
+Live Demo
+The application is deployed and accessible here:
+
+https://appigysd01-f6umwsycg7qnxmddsfcyca.streamlit.app/
 
 
