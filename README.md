@@ -34,11 +34,8 @@ PRODIGY_SD_01/
 
 # Requirements
 
-Python 3.8+
-
 Streamlit
 
-Pandas
 
 # Live Demo
 The application is deployed and accessible here:
